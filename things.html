@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background: #ffe6f2;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-back {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.love-message {
+    font-size: 24px;
+    font-family: 'Brush Script MT', cursive;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Add your 6 image URLs below */
+.card-1 .flip-card-front { background-image: url("her1.png"); }
+.card-2 .flip-card-front { background-image: url("her2.png"); }
+.card-3 .flip-card-front { background-image: url("her3.png"); }
+.card-4 .flip-card-front { background-image: url("her4.png"); }
+.card-5 .flip-card-front { background-image: url("her5.png"); }
+.card-6 .flip-card-front { background-image: url("her6.png"); }
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- Card 1 -->
+    <div class="flip-card card-1">
+        <div class="flip-card-inner">
+            <div class="flip-card-front"></div>
+            <div class="flip-card-back">
+                <div class="love-message">I Love You<br>To the Moon<br>and Back 🌙</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flip-card card-2">
+        <div class="flip-card-inner">
+            <div class="flip-card-front"></div>
+            <div class="flip-card-back">
+                <div class="love-message">You're My<br>Forever Love 💖</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flip-card card-3">
+        <div class="flip-card-inner">
+            <div class="flip-card-front"></div>
+            <div class="flip-card-back">
+                <div class="love-message">Every Moment<br>With You is Magic ✨</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="flip-card card-4">
+        <div class="flip-card-inner">
+            <div class="flip-card-front"></div>
+            <div class="flip-card-back">
+                <div class="love-message">My Heart<br>Is Yours Always 💞</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="flip-card card-5">
+        <div class="flip-card-inner">
+            <div class="flip-card-front"></div>
+            <div class="flip-card-back">
+                <div class="love-message">Together<br>Forever & Always 🌟</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="flip-card card-6">
+        <div class="flip-card-inner">
+            <div class="flip-card-front"></div>
+            <div class="flip-card-back">
+                <div class="love-message">You're My<br>Perfect Match 💍</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
